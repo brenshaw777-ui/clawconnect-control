@@ -1,15 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Menu } from "lucide-react";
 
 const navLinks = [
-  { label: "Docs", href: "#how-it-works" },
-  { label: "Installation", href: "#install" },
-  { label: "API", href: "#api" },
-  { label: "OpenClaw Skill", href: "#openclaw" },
+  { label: "Docs", href: "#how-it-works", sectionId: "how-it-works" },
+  { label: "Installation", href: "#install", sectionId: "install" },
+  { label: "API", href: "#api", sectionId: "api" },
+  { label: "OpenClaw Skill", href: "#openclaw", sectionId: "openclaw" },
 ];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sectionIds = navLinks.map((l) => l.sectionId);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length > 0) {
+          // pick the one closest to viewport top
+          visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-claw-border bg-claw-deepest">
@@ -20,8 +43,15 @@ const Header = () => {
           {navLinks.map((link, i) => (
             <span key={link.label} className="flex items-center">
               {i > 0 && <span className="text-claw-border px-2 text-[11px]">|</span>}
-              <a href={link.href} className="text-[12px] text-claw-muted transition-colors hover:text-claw-green">
-                {link.label}
+              <a
+                href={link.href}
+                className={`text-[12px] transition-colors ${
+                  activeSection === link.sectionId
+                    ? "text-claw-green"
+                    : "text-claw-muted hover:text-claw-green"
+                }`}
+              >
+                {activeSection === link.sectionId ? `> ${link.label}` : link.label}
               </a>
             </span>
           ))}
@@ -53,9 +83,11 @@ const Header = () => {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-[12px] text-claw-muted hover:text-claw-green"
+                className={`text-[12px] ${
+                  activeSection === link.sectionId ? "text-claw-green" : "text-claw-muted hover:text-claw-green"
+                }`}
               >
-                {link.label}
+                {activeSection === link.sectionId ? `> ${link.label}` : link.label}
               </a>
             ))}
           </nav>
