@@ -46,6 +46,7 @@ const Index = () => {
         <FinalCTA />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
