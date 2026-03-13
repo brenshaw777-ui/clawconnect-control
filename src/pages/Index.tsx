@@ -13,6 +13,7 @@ import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
 import Links from "@/components/landing/Links";
 import Tokenomics from "@/components/landing/Tokenomics";
+import FAQ from "@/components/landing/FAQ";
 
 const Divider = () => (
   <div className="container mx-auto px-4 lg:px-6">
@@ -28,8 +29,6 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Divider />
-        <div id="tokenomics"><Tokenomics /></div>
         <Divider />
         <div id="problem"><ProblemSection /></div>
         <Divider />
@@ -48,6 +47,10 @@ const Index = () => {
         <div id="roadmap"><Roadmap /></div>
         <Divider />
         <div id="links"><Links /></div>
+        <Divider />
+        <div id="tokenomics"><Tokenomics /></div>
+        <Divider />
+        <div id="faq"><FAQ /></div>
         <Divider />
         <FinalCTA />
       </main>
