@@ -11,29 +11,37 @@ import Roadmap from "@/components/landing/Roadmap";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
 
+const Divider = () => (
+  <div className="container mx-auto px-4 lg:px-6">
+    <div className="text-claw-muted/20 text-[11px] tracking-widest text-center select-none py-2">
+      ────────────────────────────────────────
+    </div>
+  </div>
+);
+
 const Index = () => {
   return (
-    <div className="min-h-screen bg-claw-deepest bg-noise">
+    <div className="min-h-screen bg-claw-deepest scanline-overlay">
       <Header />
       <main>
         <Hero />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <ProblemSection />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <HowItWorks />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <CoreFeatures />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <ApiQuickstart />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <OpenSourceTrust />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <OpenClawIntegration />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <BrowserStore />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <Roadmap />
-        <div className="border-t border-claw-border/20" />
+        <Divider />
         <FinalCTA />
       </main>
       <Footer />

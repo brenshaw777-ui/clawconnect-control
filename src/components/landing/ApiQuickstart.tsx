@@ -3,22 +3,10 @@ import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 
 const codeCards = [
-  {
-    title: "Check health",
-    code: `curl -H "Authorization: Bearer <TOKEN>" http://127.0.0.1:18990/health`,
-  },
-  {
-    title: "List tabs",
-    code: `curl -H "Authorization: Bearer <TOKEN>" http://127.0.0.1:18990/tabs`,
-  },
-  {
-    title: "Attach active tab",
-    code: `curl -X POST -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" -d '{}' http://127.0.0.1:18990/attach`,
-  },
-  {
-    title: "Run command on active tab",
-    code: `curl -X POST -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" -d '{"command":"snapshot"}' http://127.0.0.1:18990/command`,
-  },
+  { title: "Check health", code: `curl -H "Authorization: Bearer <TOKEN>" http://127.0.0.1:18990/health` },
+  { title: "List tabs", code: `curl -H "Authorization: Bearer <TOKEN>" http://127.0.0.1:18990/tabs` },
+  { title: "Attach active tab", code: `curl -X POST -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" -d '{}' http://127.0.0.1:18990/attach` },
+  { title: "Run command on active tab", code: `curl -X POST -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" -d '{"command":"snapshot"}' http://127.0.0.1:18990/command` },
 ];
 
 const CodeCard = ({ title, code, index }: { title: string; code: string; index: number }) => {
@@ -32,24 +20,24 @@ const CodeCard = ({ title, code, index }: { title: string; code: string; index: 
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.08, duration: 0.5 }}
-      className="rounded-[16px] border border-claw-border/50 bg-claw-deepest panel-shadow overflow-hidden"
+      transition={{ delay: index * 0.08, duration: 0.4 }}
+      className="border border-claw-border bg-claw-deepest"
     >
-      <div className="flex items-center justify-between border-b border-claw-border/30 px-4 py-2.5">
-        <span className="font-mono text-[12px] font-medium text-claw-muted">{title}</span>
+      <div className="flex items-center justify-between border-b border-claw-border px-3 py-1.5">
+        <span className="text-[10px] text-claw-green/60">user@clawconnect:~$ {title.toLowerCase()}</span>
         <button
           onClick={handleCopy}
-          className="flex h-7 w-7 items-center justify-center rounded-md text-claw-muted/50 transition-colors hover:bg-claw-panel hover:text-claw-muted"
+          className="text-claw-muted/40 transition-colors hover:text-claw-muted"
           aria-label="Copy code"
         >
-          {copied ? <Check size={13} className="text-claw-green" /> : <Copy size={13} />}
+          {copied ? <Check size={12} className="text-claw-green" /> : <Copy size={12} />}
         </button>
       </div>
-      <div className="overflow-x-auto p-4">
-        <pre className="font-mono text-[12px] leading-relaxed text-claw-muted whitespace-pre-wrap break-all md:whitespace-pre md:break-normal">
+      <div className="overflow-x-auto p-3">
+        <pre className="text-[11px] leading-relaxed text-claw-muted whitespace-pre-wrap break-all md:whitespace-pre md:break-normal">
           <code>{code}</code>
         </pre>
       </div>
@@ -59,20 +47,18 @@ const CodeCard = ({ title, code, index }: { title: string; code: string; index: 
 
 const ApiQuickstart = () => {
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-16 md:py-24">
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
       <div className="container relative mx-auto px-4 lg:px-6">
-        <span className="mb-4 inline-block font-mono text-[12px] tracking-widest text-claw-blue/50">
-          /api
-        </span>
-        <h2 className="font-heading text-[30px] font-bold tracking-tight text-claw-text md:text-[42px]">
+        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /api ---</span>
+        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text">
           Quickstart in 60 seconds
         </h2>
-        <p className="mt-3 max-w-lg font-sans text-base text-claw-muted">
-          Try the bridge with curl commands after starting your local service.
+        <p className="mt-2 text-[13px] text-claw-muted">
+          // Try the bridge with curl commands after starting your local service.
         </p>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           {codeCards.map((card, i) => (
             <CodeCard key={card.title} {...card} index={i} />
           ))}
