@@ -6,57 +6,52 @@ const cards = [
     icon: AlertTriangle,
     title: "Flaky tab targets",
     text: "Browser handles move, refresh, and focus changes without breaking long tasks.",
-    accent: "warning",
+    color: "text-claw-warning",
   },
   {
     icon: Volume2,
     title: "Noisy failures",
     text: "Every action returns explicit results, not silent guesses.",
-    accent: "danger",
+    color: "text-claw-danger",
   },
   {
     icon: Eye,
     title: "Poor observability",
     text: "Health and state endpoints let you inspect live status in one place.",
-    accent: "blue",
+    color: "text-claw-green",
   },
 ];
 
-const accentColors = {
-  warning: "text-claw-warning border-claw-warning/20 bg-claw-warning/5",
-  danger: "text-claw-danger border-claw-danger/20 bg-claw-danger/5",
-  blue: "text-claw-blue border-claw-blue/20 bg-claw-blue/5",
-};
-
 const ProblemSection = () => {
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-6">
-        <span className="mb-4 inline-block font-mono text-[12px] tracking-widest text-claw-blue/50">
-          /problem
-        </span>
-        <h2 className="font-heading text-[30px] font-bold tracking-tight text-claw-text md:text-[42px] max-w-2xl">
+        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /problem ---</span>
+        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text max-w-2xl">
           Why teams stop using brittle browser automation
         </h2>
-        <p className="mt-4 max-w-xl font-sans text-base text-claw-muted leading-relaxed">
+        <p className="mt-3 text-[13px] text-claw-muted max-w-xl leading-relaxed">
           We built ClawConnect because most automation setups break exactly when reliability matters most.
         </p>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
           {cards.map((card, i) => (
             <motion.div
               key={card.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group rounded-[18px] border border-claw-border/50 bg-claw-panel p-5 panel-shadow transition-all hover:border-claw-border hover:-translate-y-px"
+              transition={{ delay: i * 0.1, duration: 0.4 }}
+              className="border border-claw-border bg-claw-panel p-4 transition-colors hover:border-claw-muted/30"
             >
-              <div className={`mb-4 inline-flex h-9 w-9 items-center justify-center rounded-lg border ${accentColors[card.accent as keyof typeof accentColors]}`}>
-                <card.icon size={16} />
+              <div className="flex items-center gap-2 mb-3">
+                <card.icon size={14} className={card.color} />
+                <span className="text-[11px] text-claw-muted/50 uppercase tracking-wider">
+                  {card.title === "Flaky tab targets" ? "warn" : card.title === "Noisy failures" ? "err" : "info"}
+                </span>
               </div>
-              <h3 className="font-heading text-[18px] font-semibold text-claw-text">{card.title}</h3>
-              <p className="mt-2 font-sans text-[14px] leading-relaxed text-claw-muted">{card.text}</p>
+              <h3 className="text-[14px] font-semibold text-claw-text">&gt; {card.title}</h3>
+              <p className="mt-2 text-[12px] leading-relaxed text-claw-muted">{card.text}</p>
             </motion.div>
           ))}
         </div>

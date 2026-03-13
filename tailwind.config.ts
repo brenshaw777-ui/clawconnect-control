@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Space Grotesk", "sans-serif"],
-        sans: ["Inter", "sans-serif"],
+        heading: ["JetBrains Mono", "monospace"],
+        sans: ["JetBrains Mono", "monospace"],
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
@@ -63,24 +63,24 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         claw: {
-          deepest: "#05070D",
-          mid: "#0B1020",
-          elevated: "#121A2F",
-          text: "#E9EEFF",
-          muted: "#9BA7C6",
-          border: "#24304F",
+          deepest: "#000000",
+          mid: "#0a0a0a",
+          elevated: "#111111",
+          text: "#c0c0c0",
+          muted: "#666666",
+          border: "#1a1a1a",
           blue: "#4DA3FF",
-          green: "#7CFFA3",
+          green: "#00FF88",
           danger: "#FF6B7A",
           warning: "#FFD166",
-          panel: "#0C1322",
-          "panel-hover": "#10192C",
+          panel: "#080808",
+          "panel-hover": "#0f0f0f",
         },
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 1px)",
+        sm: "calc(var(--radius) - 2px)",
       },
       keyframes: {
         "accordion-down": {
@@ -91,20 +91,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "0.8" },
-        },
         "cursor-blink": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
+        },
+        scanline: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "cursor-blink": "cursor-blink 1s step-end infinite",
+        scanline: "scanline 8s linear infinite",
       },
     },
   },
