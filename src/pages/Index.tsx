@@ -1,5 +1,6 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
+import ScrollToTop from "@/components/landing/ScrollToTop";
 import ProblemSection from "@/components/landing/ProblemSection";
 import HowItWorks from "@/components/landing/HowItWorks";
 import CoreFeatures from "@/components/landing/CoreFeatures";
