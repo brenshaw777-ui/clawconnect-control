@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, Menu } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Docs", href: "#how-it-works", sectionId: "how-it-works" },
@@ -37,7 +38,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-claw-border bg-claw-deepest">
       <div className="container mx-auto flex h-12 items-center justify-between px-4 lg:px-6">
-        <a href="#" className="text-[13px] font-bold text-claw-green">[ClawConnect]</a>
+        <a href="#" className="flex items-center gap-2 text-[13px] font-bold text-claw-green">
+          <img src={logo} alt="ClawConnect" className="h-6 w-6" />
+          <span>[ClawConnect]</span>
+        </a>
 
         <nav className="hidden items-center gap-0 md:flex">
           {navLinks.map((link, i) => (
