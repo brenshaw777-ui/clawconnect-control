@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, Menu } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Docs", href: "#how-it-works", sectionId: "how-it-works" },
