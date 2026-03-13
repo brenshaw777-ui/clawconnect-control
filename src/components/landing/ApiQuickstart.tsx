@@ -36,8 +36,8 @@ const CodeCard = ({ title, code, index }: { title: string; code: string; index: 
           {copied ? <Check size={12} className="text-claw-green" /> : <Copy size={12} />}
         </button>
       </div>
-      <div className="overflow-x-auto p-3">
-        <pre className="text-[11px] leading-relaxed text-claw-muted whitespace-pre-wrap break-all md:whitespace-pre md:break-normal">
+      <div className="p-3">
+        <pre className="text-[11px] leading-relaxed text-claw-muted whitespace-pre-wrap break-all">
           <code>{code}</code>
         </pre>
       </div>

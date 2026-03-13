@@ -11,6 +11,8 @@ import BrowserStore from "@/components/landing/BrowserStore";
 import Roadmap from "@/components/landing/Roadmap";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
+import Links from "@/components/landing/Links";
+import Tokenomics from "@/components/landing/Tokenomics";
 
 const Divider = () => (
   <div className="container mx-auto px-4 lg:px-6">
@@ -27,6 +29,8 @@ const Index = () => {
       <main>
         <Hero />
         <Divider />
+        <div id="tokenomics"><Tokenomics /></div>
+        <Divider />
         <div id="problem"><ProblemSection /></div>
         <Divider />
         <div id="how-it-works"><HowItWorks /></div>
@@ -42,6 +46,8 @@ const Index = () => {
         <div id="install"><BrowserStore /></div>
         <Divider />
         <div id="roadmap"><Roadmap /></div>
+        <Divider />
+        <div id="links"><Links /></div>
         <Divider />
         <FinalCTA />
       </main>
