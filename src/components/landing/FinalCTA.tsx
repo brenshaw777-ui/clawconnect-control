@@ -9,7 +9,7 @@ const FinalCTA = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="relative border border-claw-border bg-claw-panel overflow-hidden"
+          className="relative border border-claw-border bg-claw-panel overflow-hidden panel-hover"
         >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-32 w-64 bg-claw-green/[0.04] blur-[80px]" />
 

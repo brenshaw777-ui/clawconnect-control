@@ -24,7 +24,7 @@ const CodeCard = ({ title, code, index }: { title: string; code: string; index: 
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.08, duration: 0.4 }}
-      className="border border-claw-border bg-claw-deepest"
+      className="border border-claw-border bg-claw-deepest panel-hover"
     >
       <div className="flex items-center justify-between border-b border-claw-border px-3 py-1.5">
         <span className="text-[10px] text-claw-green/60">user@clawconnect:~$ {title.toLowerCase()}</span>
