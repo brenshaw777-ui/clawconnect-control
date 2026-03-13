@@ -137,4 +137,16 @@
   .terminal-border {
     border: 1px solid #1a1a1a;
   }
+
+  .phosphor-glow {
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+  }
+
+  .phosphor-glow:hover {
+    text-shadow: 0 0 8px rgba(0,255,136,0.6), 0 0 20px rgba(0,255,136,0.3), 0 0 40px rgba(0,255,136,0.1);
+  }
+
+  a, button {
+    @apply phosphor-glow;
+  }
 }

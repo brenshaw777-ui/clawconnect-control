@@ -26,21 +26,21 @@ const Index = () => {
       <main>
         <Hero />
         <Divider />
-        <ProblemSection />
+        <div id="problem"><ProblemSection /></div>
         <Divider />
-        <HowItWorks />
+        <div id="how-it-works"><HowItWorks /></div>
         <Divider />
-        <CoreFeatures />
+        <div id="features"><CoreFeatures /></div>
         <Divider />
-        <ApiQuickstart />
+        <div id="api"><ApiQuickstart /></div>
         <Divider />
-        <OpenSourceTrust />
+        <div id="open-source"><OpenSourceTrust /></div>
         <Divider />
-        <OpenClawIntegration />
+        <div id="openclaw"><OpenClawIntegration /></div>
         <Divider />
-        <BrowserStore />
+        <div id="install"><BrowserStore /></div>
         <Divider />
-        <Roadmap />
+        <div id="roadmap"><Roadmap /></div>
         <Divider />
         <FinalCTA />
       </main>
