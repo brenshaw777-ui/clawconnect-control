@@ -40,7 +40,7 @@ const Tokenomics = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.4 }}
-              className="border border-claw-border bg-claw-panel px-4 py-5 text-center"
+              className="border border-claw-border bg-claw-panel px-4 py-5 text-center panel-hover"
             >
               <span className="block text-[10px] uppercase tracking-widest text-claw-muted/60">
                 {stat.label}

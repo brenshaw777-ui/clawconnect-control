@@ -30,7 +30,7 @@ const Links = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="group flex flex-col items-center gap-3 border border-claw-border bg-claw-panel px-4 py-6 text-center transition-all hover:border-claw-green/30 hover:bg-claw-panel-hover"
+              className="group flex flex-col items-center gap-3 border border-claw-border bg-claw-panel px-4 py-6 text-center panel-hover"
             >
               <span className="text-[24px] text-claw-green/60 transition-colors group-hover:text-claw-green">
                 {link.icon}

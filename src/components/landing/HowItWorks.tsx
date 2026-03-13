@@ -19,7 +19,7 @@ const HowItWorks = () => {
           // Simple local architecture.
         </p>
 
-        <div className="mt-10 border border-claw-border bg-claw-panel">
+        <div className="mt-10 border border-claw-border bg-claw-panel panel-hover">
           <div className="border-b border-claw-border px-4 py-1.5">
             <span className="text-[10px] text-claw-muted/50">process flow</span>
           </div>

@@ -24,7 +24,7 @@ const Roadmap = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.3 }}
-              className="flex items-center gap-3 py-1.5 text-[13px]"
+              className="flex items-center gap-3 py-1.5 text-[13px] rounded-sm transition-colors hover:bg-claw-panel-hover"
             >
               <span className="text-claw-muted/50">[ ]</span>
               <span className="text-claw-muted">{item}</span>

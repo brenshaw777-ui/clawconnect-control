@@ -26,7 +26,7 @@ const CoreFeatures = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.4 }}
-              className="border border-claw-border bg-claw-panel transition-colors hover:border-claw-muted/30"
+              className="border border-claw-border bg-claw-panel panel-hover"
             >
               <div className="border-b border-claw-border px-3 py-1.5">
                 <span className="text-[10px] text-claw-green/60">{f.tag}</span>

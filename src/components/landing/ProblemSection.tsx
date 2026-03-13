@@ -42,7 +42,7 @@ const ProblemSection = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
-              className="border border-claw-border bg-claw-panel p-4 transition-colors hover:border-claw-muted/30"
+              className="border border-claw-border bg-claw-panel p-4 panel-hover"
             >
               <div className="flex items-center gap-2 mb-3">
                 <card.icon size={14} className={card.color} />
