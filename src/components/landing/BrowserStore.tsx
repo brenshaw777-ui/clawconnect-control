@@ -18,7 +18,7 @@ const BrowserStore = () => {
             ClawConnect ships as local extension plus bridge. Open-source code stays public and auditable.
           </p>
 
-          <div className="mt-6 border border-claw-border bg-claw-panel max-w-lg">
+          <div className="mt-6 border border-claw-border bg-claw-panel max-w-lg panel-hover">
             <div className="border-b border-claw-border px-3 py-1.5">
               <span className="text-[10px] text-claw-muted/50">$ clawconnect install --target chrome</span>
             </div>
