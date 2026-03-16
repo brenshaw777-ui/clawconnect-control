@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+import heroIcon from "@/assets/hero-icon-glow.png";
 
 const terminalLines = [
   { text: "$ clawconnect start --port 18990", delay: 0 },
@@ -108,12 +108,13 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex min-h-full items-center justify-center"
           >
-            <div className="relative flex h-[240px] w-[240px] items-center justify-center border border-claw-border bg-claw-panel md:h-[320px] md:w-[320px]">
-              <div className="absolute inset-0 bg-claw-green/[0.03] blur-[40px]" />
+            <div className="relative flex h-[240px] w-[240px] items-center justify-center md:h-[360px] md:w-[360px]">
+              <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[70px] md:inset-10 md:blur-[100px]" />
+              <div className="absolute inset-0 rounded-[2px] border border-claw-border bg-claw-panel/50" />
               <img
-                src={logo}
-                alt="ClawConnect logo"
-                className="relative h-[160px] w-[160px] object-contain drop-shadow-[0_0_30px_rgba(0,255,136,0.2)] md:h-[220px] md:w-[220px]"
+                src={heroIcon}
+                alt="ClawConnect glowing hero icon"
+                className="relative h-[180px] w-[180px] object-contain md:h-[280px] md:w-[280px]"
               />
             </div>
           </motion.div>
