@@ -56,25 +56,25 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-40" />
 
       <div className="container relative mx-auto px-4 lg:px-6">
-        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:gap-12">
+        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex min-h-full items-center justify-center"
+            className="flex min-h-full items-center justify-center lg:justify-start"
           >
-            <div className="mx-auto flex max-w-[560px] flex-col items-center text-center">
+            <div className="flex max-w-[520px] flex-col items-start text-left">
               <h1 className="text-[28px] font-bold leading-[1.0] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
                 Browser automation that behaves in production
               </h1>
-              <p className="mt-4 text-[14px] leading-relaxed text-claw-muted md:text-[15px]">
+              <p className="mt-4 max-w-[38rem] text-[14px] leading-relaxed text-claw-muted md:text-[15px]">
                 ClawConnect gives your agents stable control of browser tabs with explicit acknowledgments, diagnostics, and local-first security.
               </p>
               <p className="mt-2 text-[12px] text-claw-muted/60">
                 // Open source, self-hosted bridge for commands, tabs, and workflows.
               </p>
 
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <div className="mt-6 flex flex-wrap justify-start gap-3">
                 <a
                   href="#"
                   className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
@@ -89,7 +89,7 @@ const Hero = () => {
                 </a>
               </div>
 
-              <div className="mt-6 flex flex-wrap justify-center gap-2">
+              <div className="mt-6 flex flex-wrap justify-start gap-2">
                 {badges.map((badge) => (
                   <span
                     key={badge}
@@ -106,15 +106,14 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex min-h-full items-center justify-center"
+            className="flex min-h-full items-center justify-center lg:justify-end"
           >
-            <div className="relative flex h-[240px] w-[240px] items-center justify-center md:h-[360px] md:w-[360px]">
-              <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[70px] md:inset-10 md:blur-[100px]" />
-              <div className="absolute inset-0 rounded-[2px] border border-claw-border bg-claw-panel/50" />
+            <div className="relative flex h-[280px] w-[280px] items-center justify-center md:h-[420px] md:w-[420px]">
+              <div className="absolute inset-4 rounded-full bg-claw-green/20 blur-[80px] md:inset-6 md:blur-[120px]" />
               <img
                 src={heroIcon}
                 alt="ClawConnect glowing hero icon"
-                className="relative h-[180px] w-[180px] object-contain md:h-[280px] md:w-[280px]"
+                className="relative h-[220px] w-[220px] object-contain md:h-[340px] md:w-[340px]"
               />
             </div>
           </motion.div>
