@@ -108,16 +108,22 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex min-h-full items-center justify-center"
           >
-            <div className="relative flex h-[360px] w-[360px] items-center justify-center md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]">
-              <div className="absolute inset-0 rounded-full bg-claw-green/10 blur-[60px] md:blur-[100px]" />
-              <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[110px] md:inset-12 md:blur-[160px]" />
-              <div className="absolute inset-16 rounded-full bg-claw-green/25 blur-[70px] md:inset-20 md:blur-[120px]" />
-              <img
+            <motion.div
+              whileHover={{ scale: 1.04, y: -6 }}
+              transition={{ type: "spring", stiffness: 220, damping: 18 }}
+              className="group relative flex h-[360px] w-[360px] items-center justify-center md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]"
+            >
+              <div className="absolute inset-0 rounded-full bg-claw-green/10 blur-[60px] transition-all duration-300 group-hover:bg-claw-green/15 md:blur-[100px]" />
+              <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[110px] transition-all duration-300 group-hover:bg-claw-green/30 group-hover:blur-[150px] md:inset-12 md:blur-[160px]" />
+              <div className="absolute inset-16 rounded-full bg-claw-green/25 blur-[70px] transition-all duration-300 group-hover:bg-claw-green/35 group-hover:blur-[100px] md:inset-20 md:blur-[120px]" />
+              <motion.img
                 src={heroIcon}
                 alt="ClawConnect glowing hero icon"
-                className="relative h-[320px] w-[320px] object-contain md:h-[520px] md:w-[520px] lg:h-[580px] lg:w-[580px]"
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 240, damping: 20 }}
+                className="relative h-[320px] w-[320px] object-contain drop-shadow-[0_0_24px_rgba(0,255,136,0.18)] transition-all duration-300 group-hover:drop-shadow-[0_0_44px_rgba(0,255,136,0.3)] md:h-[520px] md:w-[520px] lg:h-[580px] lg:w-[580px]"
               />
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
