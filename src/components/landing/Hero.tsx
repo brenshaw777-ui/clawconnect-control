@@ -56,59 +56,57 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-40" />
 
       <div className="container relative mx-auto px-4 lg:px-6">
-        <div className="flex flex-col items-center gap-12 md:flex-row md:gap-16">
-          {/* Left: Text content */}
+        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex-1"
+            className="flex min-h-full items-center justify-center"
           >
-            <h1 className="text-[28px] md:text-[44px] lg:text-[52px] font-bold leading-[1.0] tracking-tight text-claw-text">
-              Browser automation that behaves in production
-            </h1>
-            <p className="mt-4 text-[14px] md:text-[15px] leading-relaxed text-claw-muted">
-              ClawConnect gives your agents stable control of browser tabs with explicit acknowledgments, diagnostics, and local-first security.
-            </p>
-            <p className="mt-2 text-[12px] text-claw-muted/60">
-              // Open source, self-hosted bridge for commands, tabs, and workflows.
-            </p>
+            <div className="mx-auto flex max-w-[560px] flex-col items-center text-center">
+              <h1 className="text-[28px] font-bold leading-[1.0] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
+                Browser automation that behaves in production
+              </h1>
+              <p className="mt-4 text-[14px] leading-relaxed text-claw-muted md:text-[15px]">
+                ClawConnect gives your agents stable control of browser tabs with explicit acknowledgments, diagnostics, and local-first security.
+              </p>
+              <p className="mt-2 text-[12px] text-claw-muted/60">
+                // Open source, self-hosted bridge for commands, tabs, and workflows.
+              </p>
 
-            {/* CTAs */}
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#"
-                className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
-              >
-                View GitHub
-              </a>
-              <a
-                href="#install"
-                className="flex h-[40px] items-center border border-claw-border px-5 text-[13px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text"
-              >
-                Install Extension
-              </a>
-            </div>
-
-            {/* Badges */}
-            <div className="mt-6 flex flex-wrap gap-2">
-              {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="text-[10px] text-claw-green/70 tracking-wider"
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <a
+                  href="#"
+                  className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
                 >
-                  {badge}
-                </span>
-              ))}
+                  View GitHub
+                </a>
+                <a
+                  href="#install"
+                  className="flex h-[40px] items-center border border-claw-border px-5 text-[13px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text"
+                >
+                  Install Extension
+                </a>
+              </div>
+
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                {badges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="text-[10px] tracking-wider text-claw-green/70"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
 
-          {/* Right: Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex flex-shrink-0 items-center justify-center"
+            className="flex min-h-full items-center justify-center"
           >
             <div className="relative flex h-[240px] w-[240px] items-center justify-center border border-claw-border bg-claw-panel md:h-[320px] md:w-[320px]">
               <div className="absolute inset-0 bg-claw-green/[0.03] blur-[40px]" />
@@ -121,18 +119,17 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Terminal window below */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="mx-auto mt-14 max-w-3xl border border-claw-border bg-claw-deepest"
+          className="mx-auto mt-20 max-w-3xl border border-claw-border bg-claw-deepest md:mt-28"
         >
           <div className="flex items-center justify-between border-b border-claw-border px-3 py-1.5">
             <span className="text-[10px] text-claw-muted">clawconnect@local:~</span>
             <span className="text-[10px] text-claw-muted/40">bash</span>
           </div>
-          <div className="p-4 md:p-6 space-y-0.5">
+          <div className="space-y-0.5 p-4 md:p-6">
             {terminalLines.map((line, i) => (
               <TerminalLine key={i} {...line} />
             ))}
