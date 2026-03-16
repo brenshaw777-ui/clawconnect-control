@@ -56,12 +56,12 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-40" />
 
       <div className="container relative mx-auto px-4 lg:px-6">
-        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex min-h-full items-center justify-center lg:justify-start"
+            className="flex min-h-full items-center justify-center"
           >
             <div className="flex max-w-[520px] flex-col items-start text-left">
               <h1 className="text-[28px] font-bold leading-[1.0] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
@@ -106,7 +106,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex min-h-full items-center justify-center lg:justify-end"
+            className="flex min-h-full items-center justify-center"
           >
             <div className="relative flex h-[360px] w-[360px] items-center justify-center md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]">
               <div className="absolute inset-0 rounded-full bg-claw-green/10 blur-[60px] md:blur-[100px]" />
