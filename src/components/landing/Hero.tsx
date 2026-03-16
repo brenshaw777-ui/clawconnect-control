@@ -108,12 +108,14 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex min-h-full items-center justify-center lg:justify-end"
           >
-            <div className="relative flex h-[280px] w-[280px] items-center justify-center md:h-[420px] md:w-[420px]">
-              <div className="absolute inset-4 rounded-full bg-claw-green/20 blur-[80px] md:inset-6 md:blur-[120px]" />
+            <div className="relative flex h-[360px] w-[360px] items-center justify-center md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]">
+              <div className="absolute inset-0 rounded-full bg-claw-green/10 blur-[60px] md:blur-[100px]" />
+              <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[110px] md:inset-12 md:blur-[160px]" />
+              <div className="absolute inset-16 rounded-full bg-claw-green/25 blur-[70px] md:inset-20 md:blur-[120px]" />
               <img
                 src={heroIcon}
                 alt="ClawConnect glowing hero icon"
-                className="relative h-[220px] w-[220px] object-contain md:h-[340px] md:w-[340px]"
+                className="relative h-[320px] w-[320px] object-contain md:h-[520px] md:w-[520px] lg:h-[580px] lg:w-[580px]"
               />
             </div>
           </motion.div>
