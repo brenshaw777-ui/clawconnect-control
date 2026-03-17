@@ -3,19 +3,17 @@ import { useEffect, useState } from "react";
 import heroIcon from "@/assets/hero-icon-glow.png";
 
 const terminalLines = [
-  { text: "$ clawconnect start --port 18990", delay: 0 },
-  { text: "[INFO] bridge listening on 127.0.0.1:18990", delay: 1.2 },
-  { text: "[INFO] waiting for extension handshake...", delay: 2.0 },
-  { text: "[OK] extension connected (tab: 3)", delay: 3.2, color: "green" },
-  { text: "[OK] health check passed", delay: 4.0, color: "green" },
-  { text: "> ready.", delay: 5.0, color: "green" },
+  { text: "$ launch clawconnect.exe", delay: 0 },
+  { text: "[OK] dedicated Chromium profile initialized", delay: 1.2, color: "green" },
+  { text: "[OK] OpenClaw agent connected", delay: 2.2, color: "green" },
+  { text: "[OK] persistent browser session ready", delay: 3.2, color: "green" },
+  { text: "> waiting for tasks...", delay: 4.2, color: "green" },
 ];
 
 const badges = [
-  "[OPEN SOURCE]",
-  "[LOCAL HOST]",
-  "[TOKEN PROTECTED]",
-  "[DIAGNOSABLE]",
+  "One-time purchase",
+  "Runs locally",
+  "No subscription",
 ];
 
 const TerminalLine = ({ text, delay, color }: { text: string; delay: number; color?: string }) => {
@@ -65,27 +63,27 @@ const Hero = () => {
           >
             <div className="flex max-w-[520px] flex-col items-start text-left">
               <h1 className="text-[28px] font-bold leading-[1.0] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
-                Browser automation that behaves in production
+                Your AI agent. A real browser. No cloud required.
               </h1>
               <p className="mt-4 max-w-[38rem] text-[14px] leading-relaxed text-claw-muted md:text-[15px]">
-                ClawConnect gives your agents stable control of browser tabs with explicit acknowledgments, diagnostics, and local-first security.
+                ClawConnect gives your OpenClaw agent its own persistent Chrome browser — installed on your machine, controlled by your agent, ready to work.
               </p>
               <p className="mt-2 text-[12px] text-claw-muted/60">
-                // Open source, self-hosted bridge for commands, tabs, and workflows.
+                One-time purchase. Runs locally. No subscription.
               </p>
 
               <div className="mt-6 flex flex-wrap justify-start gap-3">
                 <a
-                  href="#"
+                  href="#pricing"
                   className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
                 >
-                  View GitHub
+                  Download ClawConnect — Windows
                 </a>
                 <a
-                  href="#install"
+                  href="#how-it-works"
                   className="flex h-[40px] items-center border border-claw-border px-5 text-[13px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text"
                 >
-                  Install Extension
+                  See how it works
                 </a>
               </div>
 

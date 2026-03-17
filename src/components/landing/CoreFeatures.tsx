@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 
 const features = [
-  { tag: "/tabs", title: "Attach, focus, and detach with control", text: "Manage multiple tabs explicitly by tab ID or host strategy." },
-  { tag: "/command", title: "Deterministic command flow", text: "Commands return clear ACK status and structured result payloads." },
-  { tag: "/capabilities", title: "Capability-aware routing", text: "Server checks supported extension actions and returns fallback errors without guessing." },
-  { tag: "/reconnect", title: "Reliable reconnect behavior", text: "Built in retry and reconnect handling for real world session instability." },
-  { tag: "/debug", title: "Health and debug endpoints", text: "/health, /state, /tabs, /debug/state, /debug/capabilities.", mono: true },
-  { tag: "/security", title: "Security defaults", text: "Localhost binding and token auth. No mandatory cloud control plane." },
+  { tag: "01", title: "Dedicated AI Browser Profile", text: "Chromium instance isolated from your personal browser. Persistent cookies, sessions, and state." },
+  { tag: "02", title: "Direct Browser Control", text: "ClawConnect manages the browser directly at the application level." },
+  { tag: "03", title: "Local-First", text: "Everything runs on your machine. Your data does not leave your computer just to make the product work." },
+  { tag: "04", title: "OpenClaw Integration", text: "Direct connection to your OpenClaw agent." },
+  { tag: "05", title: "Windows Desktop App", text: "Native installer. Optional launch at login. Clean tray presence." },
+  { tag: "06", title: "One-Time Purchase", text: "Buy once. No recurring charges. Updates included for the current major version." },
 ];
 
 const CoreFeatures = () => {
   return (
     <section className="relative py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-6">
-        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /features ---</span>
-        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text max-w-2xl">
-          Core features built for production
+        <span className="text-[11px] text-claw-green/40 tracking-widest">What you get</span>
+        <h2 className="mt-3 max-w-2xl text-[22px] font-bold tracking-tight text-claw-text md:text-[32px]">
+          What you get
         </h2>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

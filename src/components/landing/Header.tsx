@@ -3,10 +3,10 @@ import { X, Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Docs", href: "#how-it-works", sectionId: "how-it-works" },
-  { label: "Installation", href: "#install", sectionId: "install" },
-  { label: "API", href: "#api", sectionId: "api" },
-  { label: "OpenClaw Skill", href: "#openclaw", sectionId: "openclaw" },
+  { label: "Download for Windows", href: "#pricing", sectionId: "pricing" },
+  { label: "How It Works", href: "#how-it-works", sectionId: "how-it-works" },
+  { label: "Pricing", href: "#pricing", sectionId: "pricing" },
+  { label: "FAQ", href: "#faq", sectionId: "faq" },
 ];
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
       <div className="container mx-auto flex h-12 items-center justify-between px-4 lg:px-6">
         <a href="#" className="flex items-center gap-2 text-[13px] font-bold text-claw-green">
           <img src={logo} alt="ClawConnect" className="h-6 w-6" />
-          <span>[ClawConnect]</span>
+          <span>ClawConnect</span>
         </a>
 
         <nav className="hidden items-center gap-0 md:flex">
@@ -62,11 +62,8 @@ const Header = () => {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a href="#open-source" className="text-[12px] text-claw-muted transition-colors hover:text-claw-green">
-            [GitHub]
-          </a>
-          <a href="#install" className="text-[12px] font-bold text-claw-green transition-colors hover:text-claw-green/80">
-            [Get Started]
+          <a href="#pricing" className="text-[12px] font-bold text-claw-green transition-colors hover:text-claw-green/80">
+            Download for Windows
           </a>
         </div>
 
@@ -96,8 +93,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="mt-4 flex flex-col gap-2">
-            <a href="#open-source" className="text-[12px] text-claw-muted">[GitHub]</a>
-            <a href="#install" className="text-[12px] font-bold text-claw-green">[Get Started]</a>
+            <a href="#pricing" className="text-[12px] font-bold text-claw-green">Download for Windows</a>
           </div>
         </div>
       )}
