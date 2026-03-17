@@ -40,7 +40,7 @@ const Header = () => {
       <div className="container mx-auto flex h-12 items-center justify-between px-4 lg:px-6">
         <a href="#" className="flex items-center gap-2 text-[13px] font-bold text-claw-green">
           <img src={logo} alt="ClawConnect" className="h-6 w-6" />
-          <span>[ClawConnect]</span>
+          <span>ClawConnect</span>
         </a>
 
         <nav className="hidden items-center gap-0 md:flex">
