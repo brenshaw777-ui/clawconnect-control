@@ -1,6 +1,6 @@
 import logo from "@/assets/logo.png";
 
-const links = ["GitHub", "Docs", "Privacy", "Releases", "Issues"];
+const links = ["Download", "Docs", "Support"];
 
 const Footer = () => {
   return (
