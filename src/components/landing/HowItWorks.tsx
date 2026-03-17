@@ -22,13 +22,10 @@ const HowItWorks = () => {
   return (
     <section className="relative py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-6">
-        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /flow ---</span>
-        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text">
-          How ClawConnect works
+        <span className="text-[11px] text-claw-green/40 tracking-widest">How it works</span>
+        <h2 className="mt-3 text-[22px] font-bold tracking-tight text-claw-text md:text-[32px]">
+          Three things. That’s it.
         </h2>
-        <p className="mt-2 text-[13px] text-claw-muted">
-          // Simple local architecture.
-        </p>
 
         <div className="mt-10 border border-claw-border bg-claw-panel panel-hover">
           <div className="border-b border-claw-border px-4 py-1.5">
