@@ -1,59 +1,25 @@
-import { motion } from "framer-motion";
-import { AlertTriangle, Volume2, Eye } from "lucide-react";
-
-const cards = [
-  {
-    icon: AlertTriangle,
-    title: "Flaky tab targets",
-    text: "Browser handles move, refresh, and focus changes without breaking long tasks.",
-    color: "text-claw-warning",
-  },
-  {
-    icon: Volume2,
-    title: "Noisy failures",
-    text: "Every action returns explicit results, not silent guesses.",
-    color: "text-claw-danger",
-  },
-  {
-    icon: Eye,
-    title: "Poor observability",
-    text: "Health and state endpoints let you inspect live status in one place.",
-    color: "text-claw-green",
-  },
-];
-
 const ProblemSection = () => {
   return (
-    <section className="relative py-16 md:py-24">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-6">
-        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /problem ---</span>
-        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text max-w-2xl">
-          Why teams stop using brittle browser automation
-        </h2>
-        <p className="mt-3 text-[13px] text-claw-muted max-w-xl leading-relaxed">
-          We built ClawConnect because most automation setups break exactly when reliability matters most.
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-claw-muted">
+              The problem with browser automation today
+            </p>
+            <h2 className="mt-4 text-[28px] font-semibold tracking-tight text-claw-text md:text-[40px]">
+              Most AI browser tools are either fake or fragile.
+            </h2>
+          </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {cards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.4 }}
-              className="border border-claw-border bg-claw-panel p-4 panel-hover"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <card.icon size={14} className={card.color} />
-                <span className="text-[11px] text-claw-muted/50 uppercase tracking-wider">
-                  {card.title === "Flaky tab targets" ? "warn" : card.title === "Noisy failures" ? "err" : "info"}
-                </span>
-              </div>
-              <h3 className="text-[14px] font-semibold text-claw-text">&gt; {card.title}</h3>
-              <p className="mt-2 text-[12px] leading-relaxed text-claw-muted">{card.text}</p>
-            </motion.div>
-          ))}
+          <div className="space-y-5 rounded-2xl border border-claw-border bg-claw-panel p-6 md:p-8">
+            <p className="text-[15px] leading-relaxed text-claw-muted">
+              Headless scrapers get blocked. Cloud automation costs money every month and leaks control. Browser extensions are a half-measure.
+            </p>
+            <p className="text-[15px] leading-relaxed text-claw-muted">
+              Real automation means a real browser, running locally, under persistent control. That is what ClawConnect is.
+            </p>
+          </div>
         </div>
       </div>
     </section>
