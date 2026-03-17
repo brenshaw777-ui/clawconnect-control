@@ -30,19 +30,7 @@ const Index = () => {
         <Divider />
         <div id="features"><CoreFeatures /></div>
         <Divider />
-        <div id="api"><ApiQuickstart /></div>
-        <Divider />
-        <div id="open-source"><OpenSourceTrust /></div>
-        <Divider />
-        <div id="openclaw"><OpenClawIntegration /></div>
-        <Divider />
-        <div id="install"><BrowserStore /></div>
-        <Divider />
-        <div id="roadmap"><Roadmap /></div>
-        <Divider />
-        <div id="links"><Links /></div>
-        <Divider />
-        <div id="tokenomics"><Tokenomics /></div>
+        <div id="pricing"><Pricing /></div>
         <Divider />
         <div id="faq"><FAQ /></div>
         <Divider />

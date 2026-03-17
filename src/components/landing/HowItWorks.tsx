@@ -27,28 +27,21 @@ const HowItWorks = () => {
           Three things. That’s it.
         </h2>
 
-        <div className="mt-10 border border-claw-border bg-claw-panel panel-hover">
-          <div className="border-b border-claw-border px-4 py-1.5">
-            <span className="text-[10px] text-claw-muted/50">process flow</span>
-          </div>
-          <div className="p-4 md:p-6 space-y-1">
-            {steps.map((step, i) => (
-              <motion.div
-                key={step.num}
-                initial={{ opacity: 0, x: -8 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.3 }}
-                className="flex gap-3 py-1.5"
-              >
-                <span className="text-claw-green text-[13px] font-bold flex-shrink-0">[{step.num}]</span>
-                <span className="text-[13px] text-claw-muted leading-relaxed">{step.text}</span>
-              </motion.div>
-            ))}
-            {steps.map((_, i) => i < steps.length - 1 && (
-              <span key={`pipe-${i}`} className="hidden">|</span>
-            ))}
-          </div>
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {steps.map((step, i) => (
+            <motion.div
+              key={step.num}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.3 }}
+              className="border border-claw-border bg-claw-panel p-4 md:p-5"
+            >
+              <span className="text-[12px] font-bold text-claw-green">{step.num}</span>
+              <h3 className="mt-3 text-[14px] font-semibold text-claw-text">{step.title}</h3>
+              <p className="mt-2 text-[12px] leading-relaxed text-claw-muted">{step.text}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

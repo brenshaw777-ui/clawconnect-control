@@ -74,16 +74,16 @@ const Hero = () => {
 
               <div className="mt-6 flex flex-wrap justify-start gap-3">
                 <a
-                  href="#"
+                  href="#pricing"
                   className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
                 >
-                  View GitHub
+                  Download ClawConnect — Windows
                 </a>
                 <a
-                  href="#install"
+                  href="#how-it-works"
                   className="flex h-[40px] items-center border border-claw-border px-5 text-[13px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text"
                 >
-                  Install Extension
+                  See how it works
                 </a>
               </div>
 

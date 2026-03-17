@@ -13,9 +13,9 @@ const CoreFeatures = () => {
   return (
     <section className="relative py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-6">
-        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /features ---</span>
-        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text max-w-2xl">
-          Core features built for production
+        <span className="text-[11px] text-claw-green/40 tracking-widest">What you get</span>
+        <h2 className="mt-3 max-w-2xl text-[22px] font-bold tracking-tight text-claw-text md:text-[32px]">
+          What you get
         </h2>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

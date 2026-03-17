@@ -24,7 +24,7 @@ const Footer = () => {
           ))}
         </nav>
         <span className="text-[10px] text-claw-muted/20">
-          // ClawConnect 2026
+          © 2026 OpenClaw. All rights reserved.
         </span>
       </div>
     </footer>

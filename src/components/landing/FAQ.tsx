@@ -37,13 +37,10 @@ const FAQ = () => {
   return (
     <section className="relative py-16 md:py-24">
       <div className="container relative mx-auto px-4 lg:px-6">
-        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /faq ---</span>
-        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text">
-          Frequently Asked Questions
+        <span className="text-[11px] text-claw-green/40 tracking-widest">FAQ</span>
+        <h2 className="mt-3 text-[22px] font-bold tracking-tight text-claw-text md:text-[32px]">
+          FAQ
         </h2>
-        <p className="mt-2 text-[13px] text-claw-muted">
-          // Common questions answered.
-        </p>
 
         <motion.div
           initial={{ opacity: 0 }}

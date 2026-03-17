@@ -93,8 +93,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="mt-4 flex flex-col gap-2">
-            <a href="#open-source" className="text-[12px] text-claw-muted">[GitHub]</a>
-            <a href="#install" className="text-[12px] font-bold text-claw-green">[Get Started]</a>
+            <a href="#pricing" className="text-[12px] font-bold text-claw-green">Download for Windows</a>
           </div>
         </div>
       )}
