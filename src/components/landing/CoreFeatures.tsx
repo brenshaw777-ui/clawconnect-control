@@ -1,49 +1,41 @@
+import { motion } from "framer-motion";
+
 const features = [
-  {
-    title: "Dedicated AI Browser Profile",
-    text: "Chromium instance isolated from your personal browser. Persistent cookies, sessions, and state.",
-  },
-  {
-    title: "Direct Browser Control",
-    text: "ClawConnect manages the browser directly at the application level with no extra browser setup.",
-  },
-  {
-    title: "Local-First",
-    text: "Everything runs on your machine. Your data does not leave your computer just to make the product work.",
-  },
-  {
-    title: "OpenClaw Integration",
-    text: "Direct connection to your OpenClaw agent for local control in a real browser.",
-  },
-  {
-    title: "Windows Desktop App",
-    text: "Native installer. Optional launch at login. Clean tray presence.",
-  },
-  {
-    title: "One-Time Purchase",
-    text: "Buy once. No recurring charges. Updates included for the current major version.",
-  },
+  { tag: "/tabs", title: "Attach, focus, and detach with control", text: "Manage multiple tabs explicitly by tab ID or host strategy." },
+  { tag: "/command", title: "Deterministic command flow", text: "Commands return clear ACK status and structured result payloads." },
+  { tag: "/capabilities", title: "Capability-aware routing", text: "Server checks supported extension actions and returns fallback errors without guessing." },
+  { tag: "/reconnect", title: "Reliable reconnect behavior", text: "Built in retry and reconnect handling for real world session instability." },
+  { tag: "/debug", title: "Health and debug endpoints", text: "/health, /state, /tabs, /debug/state, /debug/capabilities.", mono: true },
+  { tag: "/security", title: "Security defaults", text: "Localhost binding and token auth. No mandatory cloud control plane." },
 ];
 
 const CoreFeatures = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="relative py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="max-w-2xl">
-          <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-claw-muted">
-            What you get
-          </p>
-          <h2 className="mt-4 text-[28px] font-semibold tracking-tight text-claw-text md:text-[40px]">
-            Built like a real desktop tool.
-          </h2>
-        </div>
+        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /features ---</span>
+        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text max-w-2xl">
+          Core features built for production
+        </h2>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {features.map((feature) => (
-            <div key={feature.title} className="rounded-2xl border border-claw-border bg-claw-panel p-6 md:p-7">
-              <h3 className="text-[18px] font-semibold text-claw-text">{feature.title}</h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-claw-muted">{feature.text}</p>
-            </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f, i) => (
+            <motion.div
+              key={f.title}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
+              className="border border-claw-border bg-claw-panel panel-hover"
+            >
+              <div className="border-b border-claw-border px-3 py-1.5">
+                <span className="text-[10px] text-claw-green/60">{f.tag}</span>
+              </div>
+              <div className="p-4">
+                <h3 className="text-[13px] font-semibold text-claw-text">{f.title}</h3>
+                <p className="mt-2 text-[12px] leading-relaxed text-claw-muted">{f.text}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
