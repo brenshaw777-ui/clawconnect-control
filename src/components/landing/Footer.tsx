@@ -14,7 +14,10 @@ const Footer = () => {
           {links.map((link, i) => (
             <span key={link} className="flex items-center">
               {i > 0 && <span className="text-claw-border px-2 text-[10px]">|</span>}
-              <a href="#" className="text-[11px] text-claw-muted/40 transition-colors hover:text-claw-muted">
+              <a
+                href={link === "Download" ? "#pricing" : link === "Docs" ? "#how-it-works" : "#"}
+                className="text-[11px] text-claw-muted/40 transition-colors hover:text-claw-muted"
+              >
                 {link}
               </a>
             </span>
