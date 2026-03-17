@@ -23,7 +23,7 @@ const FinalCTA = () => {
 
             <div className="mt-3">
               <p className="text-[12px] text-claw-muted/60">
-                Local install. No subscription. No extension.
+                Local install. No subscription. Windows desktop app.
               </p>
             </div>
 

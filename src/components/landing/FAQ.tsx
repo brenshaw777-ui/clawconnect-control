@@ -8,7 +8,7 @@ import {
 
 const faqs = [
   {
-    q: "Do I need a Chrome extension?",
+    q: "Do I need to install anything in Chrome?",
     a: "No. ClawConnect manages the browser at the application level.",
   },
   {

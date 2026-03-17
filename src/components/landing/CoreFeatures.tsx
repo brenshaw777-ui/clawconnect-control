@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const features = [
   { tag: "01", title: "Dedicated AI Browser Profile", text: "Chromium instance isolated from your personal browser. Persistent cookies, sessions, and state." },
-  { tag: "02", title: "No Extension Required", text: "ClawConnect manages the browser directly. No extension to install, maintain, or trust." },
+  { tag: "02", title: "Direct Browser Control", text: "ClawConnect manages the browser directly at the application level." },
   { tag: "03", title: "Local-First", text: "Everything runs on your machine. Your data does not leave your computer just to make the product work." },
   { tag: "04", title: "OpenClaw Integration", text: "Direct connection to your OpenClaw agent." },
   { tag: "05", title: "Windows Desktop App", text: "Native installer. Optional launch at login. Clean tray presence." },
