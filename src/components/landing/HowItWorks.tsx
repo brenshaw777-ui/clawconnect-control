@@ -1,10 +1,21 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: "01", text: "Agent or tool sends a command to local bridge at 127.0.0.1:18990." },
-  { num: "02", text: "Bridge authenticates and routes through websocket to attached extension." },
-  { num: "03", text: "Extension executes action in target tab and returns structured result." },
-  { num: "04", text: "Optional debug endpoints show state, health, and capabilities." },
+  {
+    num: "01",
+    title: "Install ClawConnect",
+    text: "Download the Windows app and run the installer. It sets up a dedicated Chromium profile isolated from your personal browsing.",
+  },
+  {
+    num: "02",
+    title: "Connect your OpenClaw agent",
+    text: "ClawConnect links directly to your local OpenClaw instance. Your agent now has eyes and hands in a real browser.",
+  },
+  {
+    num: "03",
+    title: "Give it tasks",
+    text: "Tell your agent what to do. It opens pages, fills forms, clicks buttons, reads content, and works in a persistent real browser session.",
+  },
 ];
 
 const HowItWorks = () => {

@@ -3,19 +3,17 @@ import { useEffect, useState } from "react";
 import heroIcon from "@/assets/hero-icon-glow.png";
 
 const terminalLines = [
-  { text: "$ clawconnect start --port 18990", delay: 0 },
-  { text: "[INFO] bridge listening on 127.0.0.1:18990", delay: 1.2 },
-  { text: "[INFO] waiting for extension handshake...", delay: 2.0 },
-  { text: "[OK] extension connected (tab: 3)", delay: 3.2, color: "green" },
-  { text: "[OK] health check passed", delay: 4.0, color: "green" },
-  { text: "> ready.", delay: 5.0, color: "green" },
+  { text: "$ launch clawconnect.exe", delay: 0 },
+  { text: "[OK] dedicated Chromium profile initialized", delay: 1.2, color: "green" },
+  { text: "[OK] OpenClaw agent connected", delay: 2.2, color: "green" },
+  { text: "[OK] persistent browser session ready", delay: 3.2, color: "green" },
+  { text: "> waiting for tasks...", delay: 4.2, color: "green" },
 ];
 
 const badges = [
-  "[OPEN SOURCE]",
-  "[LOCAL HOST]",
-  "[TOKEN PROTECTED]",
-  "[DIAGNOSABLE]",
+  "One-time purchase",
+  "Runs locally",
+  "No subscription",
 ];
 
 const TerminalLine = ({ text, delay, color }: { text: string; delay: number; color?: string }) => {

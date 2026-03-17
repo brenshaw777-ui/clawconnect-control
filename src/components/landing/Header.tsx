@@ -3,10 +3,10 @@ import { X, Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Docs", href: "#how-it-works", sectionId: "how-it-works" },
-  { label: "Installation", href: "#install", sectionId: "install" },
-  { label: "API", href: "#api", sectionId: "api" },
-  { label: "OpenClaw Skill", href: "#openclaw", sectionId: "openclaw" },
+  { label: "Download for Windows", href: "#pricing", sectionId: "pricing" },
+  { label: "How It Works", href: "#how-it-works", sectionId: "how-it-works" },
+  { label: "Pricing", href: "#pricing", sectionId: "pricing" },
+  { label: "FAQ", href: "#faq", sectionId: "faq" },
 ];
 
 const Header = () => {

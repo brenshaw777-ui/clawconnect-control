@@ -4,16 +4,10 @@ import ScrollToTop from "@/components/landing/ScrollToTop";
 import ProblemSection from "@/components/landing/ProblemSection";
 import HowItWorks from "@/components/landing/HowItWorks";
 import CoreFeatures from "@/components/landing/CoreFeatures";
-import ApiQuickstart from "@/components/landing/ApiQuickstart";
-import OpenSourceTrust from "@/components/landing/OpenSourceTrust";
-import OpenClawIntegration from "@/components/landing/OpenClawIntegration";
-import BrowserStore from "@/components/landing/BrowserStore";
-import Roadmap from "@/components/landing/Roadmap";
+import Pricing from "@/components/landing/Pricing";
+import FAQ from "@/components/landing/FAQ";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
-import Links from "@/components/landing/Links";
-import Tokenomics from "@/components/landing/Tokenomics";
-import FAQ from "@/components/landing/FAQ";
 
 const Divider = () => (
   <div className="container mx-auto px-4 lg:px-6">
