@@ -4,8 +4,8 @@ const features = [
     text: "Chromium instance isolated from your personal browser. Persistent cookies, sessions, and state.",
   },
   {
-    title: "No Extension Required",
-    text: "ClawConnect manages the browser directly. No separate browser plugin to install or maintain.",
+    title: "Direct Browser Control",
+    text: "ClawConnect manages the browser directly at the application level with no extra browser setup.",
   },
   {
     title: "Local-First",

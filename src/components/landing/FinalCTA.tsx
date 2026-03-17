@@ -18,7 +18,7 @@ const FinalCTA = () => {
           </a>
 
           <p className="mt-4 text-[12px] text-claw-muted">
-            Local install. No subscription. No extension.
+            Local install. No subscription. Real browser.
           </p>
         </div>
       </div>
