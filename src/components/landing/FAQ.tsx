@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -8,67 +7,60 @@ import {
 
 const faqs = [
   {
-    q: "What is ClawConnect?",
-    a: "ClawConnect is an open-source, local-first browser automation bridge that gives AI agents stable control over browser tabs with built-in diagnostics, acknowledgments, and security.",
+    q: "Do I need a Chrome extension?",
+    a: "No. ClawConnect manages the browser at the application level.",
   },
   {
-    q: "What is $CCT?",
-    a: "$CCT is the ClawConnect token on the Base network. It has a total supply of 10,000, zero taxes, and powers the ClawConnect ecosystem.",
+    q: "Does my data go to the cloud?",
+    a: "No. ClawConnect runs on your Windows machine and keeps the browsing and control path local-first.",
   },
   {
-    q: "Is ClawConnect open source?",
-    a: "Yes. ClawConnect is fully open source. You can view, fork, and contribute to the codebase on GitHub.",
+    q: "What’s the difference between ClawConnect and a headless browser?",
+    a: "ClawConnect uses a real visible Chromium browser with a persistent profile, so sessions persist and sites behave more naturally.",
   },
   {
-    q: "How does the bridge work?",
-    a: "The bridge runs locally on your machine and communicates with a browser extension. AI agents send commands via a REST API, and the bridge relays them to the active browser tab with full acknowledgment and error reporting.",
+    q: "Does this work without OpenClaw?",
+    a: "No. ClawConnect is built for the OpenClaw ecosystem and requires OpenClaw.",
   },
   {
-    q: "What network is $CCT on?",
-    a: "$CCT is deployed on the Base network (Coinbase L2). You can trade it on any Base-compatible DEX.",
+    q: "What’s included in future updates?",
+    a: "Bug fixes and improvements within the current major version are included.",
   },
   {
-    q: "Is there any tax on $CCT?",
-    a: "No. $CCT has 0% buy and sell taxes. What you buy is what you get.",
+    q: "Is there a Mac or Linux version?",
+    a: "Windows is the launch platform. Other platforms may come later.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <section className="relative py-16 md:py-24">
-      <div className="container relative mx-auto px-4 lg:px-6">
-        <span className="text-[11px] text-claw-green/40 tracking-widest">--- /faq ---</span>
-        <h2 className="mt-3 text-[22px] md:text-[32px] font-bold tracking-tight text-claw-text">
-          Frequently Asked Questions
-        </h2>
-        <p className="mt-2 text-[13px] text-claw-muted">
-          // Common questions answered.
-        </p>
+    <section className="py-16 md:py-24">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="max-w-2xl">
+          <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-claw-muted">FAQ</p>
+          <h2 className="mt-4 text-[28px] font-semibold tracking-tight text-claw-text md:text-[40px]">
+            Questions before you install.
+          </h2>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="mt-10 max-w-2xl"
-        >
-          <Accordion type="single" collapsible className="space-y-2">
+        <div className="mt-10 max-w-3xl">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
-                key={i}
+                key={faq.q}
                 value={`faq-${i}`}
-                className="border border-claw-border bg-claw-panel px-4 data-[state=open]:border-claw-green/20"
+                className="rounded-2xl border border-claw-border bg-claw-panel px-5"
               >
-                <AccordionTrigger className="text-[13px] font-bold text-claw-muted hover:text-claw-green hover:no-underline py-4">
-                  {`> ${faq.q}`}
+                <AccordionTrigger className="py-5 text-left text-[14px] font-medium text-claw-text hover:no-underline">
+                  {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-[12px] leading-relaxed text-claw-muted/80 pb-4">
+                <AccordionContent className="pb-5 text-[14px] leading-relaxed text-claw-muted">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

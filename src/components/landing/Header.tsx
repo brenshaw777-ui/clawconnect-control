@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { X, Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Docs", href: "#how-it-works", sectionId: "how-it-works" },
-  { label: "Installation", href: "#install", sectionId: "install" },
-  { label: "API", href: "#api", sectionId: "api" },
-  { label: "OpenClaw Skill", href: "#openclaw", sectionId: "openclaw" },
+  { label: "Download for Windows", href: "#pricing", sectionId: "pricing" },
+  { label: "How It Works", href: "#how-it-works", sectionId: "how-it-works" },
+  { label: "Pricing", href: "#pricing", sectionId: "pricing" },
+  { label: "FAQ", href: "#faq", sectionId: "faq" },
 ];
 
 const Header = () => {
@@ -19,7 +19,6 @@ const Header = () => {
       (entries) => {
         const visible = entries.filter((e) => e.isIntersecting);
         if (visible.length > 0) {
-          // pick the one closest to viewport top
           visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
           setActiveSection(visible[0].target.id);
         }
@@ -36,43 +35,41 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-claw-border bg-claw-deepest">
-      <div className="container mx-auto flex h-12 items-center justify-between px-4 lg:px-6">
-        <a href="#" className="flex items-center gap-2 text-[13px] font-bold text-claw-green">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-claw-border bg-claw-deepest/95 backdrop-blur-sm">
+      <div className="container mx-auto flex h-14 items-center justify-between px-4 lg:px-6">
+        <a href="#" className="flex items-center gap-2 text-[13px] font-semibold text-claw-text">
           <img src={logo} alt="ClawConnect" className="h-6 w-6" />
-          <span>[ClawConnect]</span>
+          <span>ClawConnect</span>
         </a>
 
-        <nav className="hidden items-center gap-0 md:flex">
-          {navLinks.map((link, i) => (
-            <span key={link.label} className="flex items-center">
-              {i > 0 && <span className="text-claw-border px-2 text-[11px]">|</span>}
-              <a
-                href={link.href}
-                className={`text-[12px] transition-colors ${
-                  activeSection === link.sectionId
-                    ? "text-claw-green"
-                    : "text-claw-muted hover:text-claw-green"
-                }`}
-              >
-                {activeSection === link.sectionId ? `> ${link.label}` : link.label}
-              </a>
-            </span>
+        <nav className="hidden items-center gap-6 md:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className={`text-[12px] transition-colors ${
+                activeSection === link.sectionId
+                  ? "text-claw-text"
+                  : "text-claw-muted hover:text-claw-text"
+              }`}
+            >
+              {link.label}
+            </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <a href="#open-source" className="text-[12px] text-claw-muted transition-colors hover:text-claw-green">
-            [GitHub]
-          </a>
-          <a href="#install" className="text-[12px] font-bold text-claw-green transition-colors hover:text-claw-green/80">
-            [Get Started]
+        <div className="hidden md:block">
+          <a
+            href="#pricing"
+            className="inline-flex h-[38px] items-center border border-claw-border bg-claw-panel px-4 text-[12px] font-medium text-claw-text transition-colors hover:bg-claw-panel-hover"
+          >
+            Download for Windows
           </a>
         </div>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-claw-muted md:hidden"
+          className="text-claw-muted transition-colors hover:text-claw-text md:hidden"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={18} /> : <Menu size={18} />}
@@ -87,18 +84,21 @@ const Header = () => {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`text-[12px] ${
-                  activeSection === link.sectionId ? "text-claw-green" : "text-claw-muted hover:text-claw-green"
+                className={`text-[13px] ${
+                  activeSection === link.sectionId ? "text-claw-text" : "text-claw-muted hover:text-claw-text"
                 }`}
               >
-                {activeSection === link.sectionId ? `> ${link.label}` : link.label}
+                {link.label}
               </a>
             ))}
           </nav>
-          <div className="mt-4 flex flex-col gap-2">
-            <a href="#open-source" className="text-[12px] text-claw-muted">[GitHub]</a>
-            <a href="#install" className="text-[12px] font-bold text-claw-green">[Get Started]</a>
-          </div>
+          <a
+            href="#pricing"
+            onClick={() => setMobileOpen(false)}
+            className="mt-4 inline-flex h-[38px] items-center border border-claw-border bg-claw-panel px-4 text-[12px] font-medium text-claw-text"
+          >
+            Download for Windows
+          </a>
         </div>
       )}
     </header>

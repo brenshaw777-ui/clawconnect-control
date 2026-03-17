@@ -4,28 +4,20 @@ import ScrollToTop from "@/components/landing/ScrollToTop";
 import ProblemSection from "@/components/landing/ProblemSection";
 import HowItWorks from "@/components/landing/HowItWorks";
 import CoreFeatures from "@/components/landing/CoreFeatures";
-import ApiQuickstart from "@/components/landing/ApiQuickstart";
-import OpenSourceTrust from "@/components/landing/OpenSourceTrust";
-import OpenClawIntegration from "@/components/landing/OpenClawIntegration";
-import BrowserStore from "@/components/landing/BrowserStore";
-import Roadmap from "@/components/landing/Roadmap";
+import Pricing from "@/components/landing/Pricing";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
-import Links from "@/components/landing/Links";
-import Tokenomics from "@/components/landing/Tokenomics";
 import FAQ from "@/components/landing/FAQ";
 
 const Divider = () => (
   <div className="container mx-auto px-4 lg:px-6">
-    <div className="text-claw-muted/20 text-[11px] tracking-widest text-center select-none py-2">
-      ────────────────────────────────────────
-    </div>
+    <div className="border-t border-claw-border" />
   </div>
 );
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-claw-deepest scanline-overlay">
+    <div className="min-h-screen bg-claw-deepest">
       <Header />
       <main>
         <Hero />
@@ -36,19 +28,7 @@ const Index = () => {
         <Divider />
         <div id="features"><CoreFeatures /></div>
         <Divider />
-        <div id="api"><ApiQuickstart /></div>
-        <Divider />
-        <div id="open-source"><OpenSourceTrust /></div>
-        <Divider />
-        <div id="openclaw"><OpenClawIntegration /></div>
-        <Divider />
-        <div id="install"><BrowserStore /></div>
-        <Divider />
-        <div id="roadmap"><Roadmap /></div>
-        <Divider />
-        <div id="links"><Links /></div>
-        <Divider />
-        <div id="tokenomics"><Tokenomics /></div>
+        <div id="pricing"><Pricing /></div>
         <Divider />
         <div id="faq"><FAQ /></div>
         <Divider />
