@@ -1,155 +1,105 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import heroIcon from "@/assets/hero-icon-glow.png";
-
-const terminalLines = [
-  { text: "$ clawconnect start --port 18990", delay: 0 },
-  { text: "[INFO] bridge listening on 127.0.0.1:18990", delay: 1.2 },
-  { text: "[INFO] waiting for extension handshake...", delay: 2.0 },
-  { text: "[OK] extension connected (tab: 3)", delay: 3.2, color: "green" },
-  { text: "[OK] health check passed", delay: 4.0, color: "green" },
-  { text: "> ready.", delay: 5.0, color: "green" },
-];
-
-const badges = [
-  "[OPEN SOURCE]",
-  "[LOCAL HOST]",
-  "[TOKEN PROTECTED]",
-  "[DIAGNOSABLE]",
-];
-
-const TerminalLine = ({ text, delay, color }: { text: string; delay: number; color?: string }) => {
-  const [displayed, setDisplayed] = useState("");
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const startTimer = setTimeout(() => setStarted(true), delay * 1000);
-    return () => clearTimeout(startTimer);
-  }, [delay]);
-
-  useEffect(() => {
-    if (!started) return;
-    let i = 0;
-    const interval = setInterval(() => {
-      i++;
-      setDisplayed(text.slice(0, i));
-      if (i >= text.length) clearInterval(interval);
-    }, 18);
-    return () => clearInterval(interval);
-  }, [started, text]);
-
-  const colorClass = color === "green" ? "text-claw-green" : "text-claw-text";
-
-  return (
-    <div className={`${colorClass} text-[12px] md:text-[13px] leading-relaxed min-h-[1.6em]`}>
-      {displayed}
-      {started && displayed.length < text.length && (
-        <span className="animate-cursor-blink">█</span>
-      )}
-    </div>
-  );
-};
 
 const Hero = () => {
   return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24">
-      <div className="absolute inset-0 bg-grid-pattern opacity-40" />
-
+    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
       <div className="container relative mx-auto px-4 lg:px-6">
-        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:gap-12">
+        <div className="grid items-center gap-12 md:grid-cols-[minmax(0,1fr)_560px] md:gap-10">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex min-h-full items-center justify-center"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            className="max-w-2xl"
           >
-            <div className="flex max-w-[520px] flex-col items-start text-left">
-              <h1 className="text-[28px] font-bold leading-[1.0] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
-                Browser automation that behaves in production
-              </h1>
-              <p className="mt-4 max-w-[38rem] text-[14px] leading-relaxed text-claw-muted md:text-[15px]">
-                ClawConnect gives your agents stable control of browser tabs with explicit acknowledgments, diagnostics, and local-first security.
-              </p>
-              <p className="mt-2 text-[12px] text-claw-muted/60">
-                // Open source, self-hosted bridge for commands, tabs, and workflows.
-              </p>
+            <h1 className="text-[34px] font-semibold leading-[1.02] tracking-tight text-claw-text md:text-[54px] lg:text-[62px]">
+              Your AI agent. A real browser. No cloud required.
+            </h1>
+            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-claw-muted md:text-[16px]">
+              ClawConnect gives your OpenClaw agent its own persistent Chrome browser, installed on your machine, controlled by your agent, and ready to work.
+            </p>
 
-              <div className="mt-6 flex flex-wrap justify-start gap-3">
-                <a
-                  href="#"
-                  className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
-                >
-                  View GitHub
-                </a>
-                <a
-                  href="#install"
-                  className="flex h-[40px] items-center border border-claw-border px-5 text-[13px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text"
-                >
-                  Install Extension
-                </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#pricing"
+                className="inline-flex h-11 items-center justify-center border border-claw-border bg-claw-text px-5 text-[13px] font-semibold text-claw-deepest transition-opacity hover:opacity-90"
+              >
+                Download ClawConnect for Windows
+              </a>
+              <a
+                href="#how-it-works"
+                className="inline-flex h-11 items-center justify-center border border-claw-border bg-claw-panel px-5 text-[13px] font-semibold text-claw-text transition-colors hover:border-claw-text/30"
+              >
+                See how it works ↓
+              </a>
+            </div>
+
+            <p className="mt-4 text-[12px] text-claw-muted">
+              One-time purchase. Runs locally. No subscription.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="relative"
+          >
+            <div className="border border-claw-border bg-claw-panel shadow-[0_30px_80px_hsl(220_20%_4%/0.45)]">
+              <div className="flex items-center justify-between border-b border-claw-border px-4 py-3">
+                <div>
+                  <p className="text-[12px] font-semibold text-claw-text">ClawConnect</p>
+                  <p className="text-[11px] text-claw-muted">Dedicated browser session for OpenClaw</p>
+                </div>
+                <span className="border border-claw-border px-2 py-1 text-[10px] text-claw-muted">Windows app</span>
               </div>
 
-              <div className="mt-6 flex flex-wrap justify-start gap-2">
-                {badges.map((badge) => (
-                  <span
-                    key={badge}
-                    className="text-[10px] tracking-wider text-claw-green/70"
-                  >
-                    {badge}
-                  </span>
-                ))}
+              <div className="grid gap-4 p-4 md:grid-cols-[180px_minmax(0,1fr)]">
+                <div className="space-y-3 border border-claw-border bg-claw-deepest p-3">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-claw-muted">Agent status</p>
+                    <p className="mt-1 text-[13px] font-semibold text-claw-text">Connected</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-claw-muted">Browser profile</p>
+                    <p className="mt-1 text-[13px] font-semibold text-claw-text">Persistent</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-claw-muted">Mode</p>
+                    <p className="mt-1 text-[13px] font-semibold text-claw-text">Local only</p>
+                  </div>
+                </div>
+
+                <div className="border border-claw-border bg-claw-deepest">
+                  <div className="flex items-center gap-2 border-b border-claw-border px-3 py-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-claw-muted/50" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-claw-muted/40" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-claw-muted/30" />
+                    <span className="ml-3 text-[11px] text-claw-muted">Agent browser session</span>
+                  </div>
+                  <div className="space-y-4 p-4">
+                    <div className="rounded-sm border border-claw-border bg-claw-panel p-3">
+                      <p className="text-[11px] text-claw-muted">Task</p>
+                      <p className="mt-1 text-[13px] text-claw-text">Log in, open dashboard, and export the latest report.</p>
+                    </div>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <div className="rounded-sm border border-claw-border bg-claw-panel p-3">
+                        <p className="text-[11px] text-claw-muted">Session state</p>
+                        <p className="mt-1 text-[13px] font-semibold text-claw-text">Cookies retained</p>
+                      </div>
+                      <div className="rounded-sm border border-claw-border bg-claw-panel p-3">
+                        <p className="text-[11px] text-claw-muted">Browser type</p>
+                        <p className="mt-1 text-[13px] font-semibold text-claw-text">Visible Chromium</p>
+                      </div>
+                    </div>
+                    <div className="rounded-sm border border-claw-border bg-claw-panel p-3 text-[12px] leading-relaxed text-claw-muted">
+                      ClawConnect launches a dedicated browser profile that persists between tasks, separate from your personal browsing.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex min-h-full items-center justify-center"
-          >
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
-              className="group relative flex h-[360px] w-[360px] items-center justify-center transform-gpu md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]"
-            >
-              <div className="absolute inset-0 rounded-full bg-claw-green/10 blur-[60px] transition-all duration-300 group-hover:bg-claw-green/15 md:blur-[100px]" />
-              <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[110px] transition-all duration-300 group-hover:bg-claw-green/30 group-hover:blur-[150px] md:inset-12 md:blur-[160px]" />
-              <div className="absolute inset-16 rounded-full bg-claw-green/25 blur-[70px] transition-all duration-300 group-hover:bg-claw-green/35 group-hover:blur-[100px] md:inset-20 md:blur-[120px]" />
-              <img
-                src={heroIcon}
-                alt="ClawConnect glowing hero icon"
-                className="relative h-[320px] w-[320px] object-contain drop-shadow-[0_0_24px_rgba(0,255,136,0.18)] transition-all duration-300 group-hover:drop-shadow-[0_0_44px_rgba(0,255,136,0.3)] md:h-[520px] md:w-[520px] lg:h-[580px] lg:w-[580px]"
-              />
-            </motion.div>
-          </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="mx-auto mt-20 max-w-3xl border border-claw-border bg-claw-deepest md:mt-28"
-        >
-          <div className="flex items-center justify-between border-b border-claw-border px-3 py-1.5">
-            <span className="text-[10px] text-claw-muted">clawconnect@local:~</span>
-            <span className="text-[10px] text-claw-muted/40">bash</span>
-          </div>
-          <div className="space-y-0.5 p-4 md:p-6">
-            {terminalLines.map((line, i) => (
-              <TerminalLine key={i} {...line} />
-            ))}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 6 }}
-              className="pt-1"
-            >
-              <span className="text-claw-muted text-[12px] md:text-[13px]">$ </span>
-              <span className="animate-cursor-blink text-claw-green text-[12px] md:text-[13px]">█</span>
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
