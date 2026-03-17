@@ -62,11 +62,8 @@ const Header = () => {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a href="#open-source" className="text-[12px] text-claw-muted transition-colors hover:text-claw-green">
-            [GitHub]
-          </a>
-          <a href="#install" className="text-[12px] font-bold text-claw-green transition-colors hover:text-claw-green/80">
-            [Get Started]
+          <a href="#pricing" className="text-[12px] font-bold text-claw-green transition-colors hover:text-claw-green/80">
+            Download for Windows
           </a>
         </div>
 
