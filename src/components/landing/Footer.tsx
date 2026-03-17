@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center gap-3 px-4 md:flex-row md:justify-between lg:px-6">
         <span className="flex items-center gap-2 text-[11px] text-claw-muted/40">
           <img src={logo} alt="ClawConnect" className="h-4 w-4 opacity-40" />
-          ClawConnect by the Open Source community.
+          ClawConnect by OpenClaw
         </span>
         <nav className="flex flex-wrap items-center gap-0">
           {links.map((link, i) => (
