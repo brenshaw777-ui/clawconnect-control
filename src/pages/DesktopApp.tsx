@@ -49,6 +49,7 @@ const DesktopApp = () => {
       >
         {/* Sidebar */}
         <div className="w-14 bg-[#0f0f0f] border-r border-claw-border flex flex-col items-center py-3 flex-shrink-0">
+          <img src={clawLogo} alt="ClawConnect" className="w-8 h-8 mb-3" />
           <div className="flex flex-col gap-1 flex-1">
             {topItems.map((item) => {
               const Icon = item.icon;
