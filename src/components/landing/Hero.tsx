@@ -54,7 +54,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-40" />
 
       <div className="container relative mx-auto px-4 lg:px-6">
-        <div className="grid items-center gap-12 md:min-h-[62vh] md:grid-cols-2 md:gap-8 lg:gap-12">
+        <div className="grid items-center gap-12 lg:min-h-[62vh] lg:grid-cols-2 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
