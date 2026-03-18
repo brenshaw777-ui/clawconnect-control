@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LayoutGrid, Globe, SlidersHorizontal, Activity, Terminal } from "lucide-react";
+import clawLogo from "@/assets/clawconnect-logo.png";
 import Dashboard from "@/components/desktop/Dashboard";
 import DashboardOffline from "@/components/desktop/DashboardOffline";
 import BrowserTabs from "@/components/desktop/BrowserTabs";
@@ -48,6 +49,7 @@ const DesktopApp = () => {
       >
         {/* Sidebar */}
         <div className="w-14 bg-[#0f0f0f] border-r border-claw-border flex flex-col items-center py-3 flex-shrink-0">
+          <img src={clawLogo} alt="ClawConnect" className="w-8 h-8 mb-3" />
           <div className="flex flex-col gap-1 flex-1">
             {topItems.map((item) => {
               const Icon = item.icon;
