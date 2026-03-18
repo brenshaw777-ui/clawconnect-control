@@ -62,8 +62,10 @@ const Hero = () => {
             className="flex min-h-full items-center justify-center"
           >
             <div className="flex max-w-[520px] flex-col items-start text-left">
-              <h1 className="text-[28px] font-bold leading-[1.0] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
-                Your AI agent. A real browser. No cloud required.
+              <h1 className="text-[28px] font-bold leading-[1.15] tracking-tight text-claw-text md:text-[44px] lg:text-[52px]">
+                Your AI agent.<br />
+                A real browser.<br />
+                No cloud required.
               </h1>
               <p className="mt-4 max-w-[38rem] text-[14px] leading-relaxed text-claw-muted md:text-[15px]">
                 ClawConnect gives your OpenClaw agent its own persistent Chrome browser — installed on your machine, controlled by your agent, ready to work.
