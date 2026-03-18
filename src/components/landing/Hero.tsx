@@ -109,7 +109,7 @@ const Hero = () => {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="group relative flex h-[360px] w-[360px] items-center justify-center transform-gpu md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]"
+              className="group relative flex h-[280px] w-[280px] items-center justify-center transform-gpu sm:h-[360px] sm:w-[360px] md:h-[560px] md:w-[560px] lg:h-[640px] lg:w-[640px]"
             >
               <div className="absolute inset-0 rounded-full bg-claw-green/10 blur-[60px] transition-all duration-300 group-hover:bg-claw-green/15 md:blur-[100px]" />
               <div className="absolute inset-8 rounded-full bg-claw-green/20 blur-[110px] transition-all duration-300 group-hover:bg-claw-green/30 group-hover:blur-[150px] md:inset-12 md:blur-[160px]" />
