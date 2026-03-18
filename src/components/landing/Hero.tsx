@@ -127,7 +127,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="mx-auto mt-20 max-w-3xl border border-claw-border bg-claw-deepest md:mt-28"
+          className="mx-auto mt-20 max-w-3xl overflow-x-auto border border-claw-border bg-claw-deepest md:mt-28"
         >
           <div className="flex items-center justify-between border-b border-claw-border px-3 py-1.5">
             <span className="text-[10px] text-claw-muted">clawconnect@local:~</span>
