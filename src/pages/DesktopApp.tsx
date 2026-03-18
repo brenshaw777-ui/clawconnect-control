@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LayoutGrid, Globe, SlidersHorizontal, Activity, Terminal } from "lucide-react";
+import clawLogo from "@/assets/clawconnect-logo.png";
 import Dashboard from "@/components/desktop/Dashboard";
 import DashboardOffline from "@/components/desktop/DashboardOffline";
 import BrowserTabs from "@/components/desktop/BrowserTabs";
