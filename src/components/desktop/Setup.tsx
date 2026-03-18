@@ -27,6 +27,7 @@ const StepIndicator = ({ current }: { current: number }) => (
 
 const Step1 = ({ onNext }: { onNext: () => void }) => (
   <div className="flex-1 flex flex-col items-center justify-center text-center px-8">
+    <img src={clawLogo} alt="ClawConnect" className="w-20 h-20 mb-3" />
     <div className="text-primary text-[28px] font-bold tracking-tight mb-1">ClawConnect</div>
     <div className="text-claw-muted text-[11px] mb-4">// your dedicated AI browser, managed.</div>
     <p className="text-claw-text text-[12px] max-w-xs mb-6 leading-relaxed">
