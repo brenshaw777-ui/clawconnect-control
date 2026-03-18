@@ -46,7 +46,7 @@ const Pricing = () => {
 
             <a
               href="#"
-              className="mt-8 flex h-[40px] w-fit items-center border border-claw-green bg-claw-green/10 px-6 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
+              className="mt-8 flex h-[40px] w-full items-center justify-center border border-claw-green bg-claw-green/10 px-6 text-[12px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm sm:w-fit sm:text-[13px]"
             >
               Buy Now — Download Instantly
             </a>
