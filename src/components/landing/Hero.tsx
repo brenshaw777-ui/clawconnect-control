@@ -72,16 +72,16 @@ const Hero = () => {
                 One-time purchase. Runs locally. No subscription.
               </p>
 
-              <div className="mt-6 flex flex-wrap justify-start gap-3">
+              <div className="mt-6 flex w-full flex-col justify-start gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href="#pricing"
-                  className="flex h-[40px] items-center border border-claw-green bg-claw-green/10 px-5 text-[13px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm"
+                  className="flex h-[40px] items-center justify-center border border-claw-green bg-claw-green/10 px-5 text-[12px] font-bold text-claw-green transition-all hover:bg-claw-green/20 glow-green-sm sm:text-[13px] sm:justify-start"
                 >
                   Download ClawConnect — Windows
                 </a>
                 <a
                   href="#how-it-works"
-                  className="flex h-[40px] items-center border border-claw-border px-5 text-[13px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text"
+                  className="flex h-[40px] items-center justify-center border border-claw-border px-5 text-[12px] text-claw-muted transition-all hover:border-claw-muted/40 hover:text-claw-text sm:text-[13px] sm:justify-start"
                 >
                   See how it works
                 </a>
