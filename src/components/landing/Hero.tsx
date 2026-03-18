@@ -117,7 +117,7 @@ const Hero = () => {
               <img
                 src={heroIcon}
                 alt="ClawConnect glowing hero icon"
-                className="relative h-[320px] w-[320px] object-contain drop-shadow-[0_0_24px_rgba(0,255,136,0.18)] transition-all duration-300 group-hover:drop-shadow-[0_0_44px_rgba(0,255,136,0.3)] md:h-[520px] md:w-[520px] lg:h-[580px] lg:w-[580px]"
+                className="relative h-[240px] w-[240px] object-contain drop-shadow-[0_0_24px_rgba(0,255,136,0.18)] transition-all duration-300 group-hover:drop-shadow-[0_0_44px_rgba(0,255,136,0.3)] sm:h-[320px] sm:w-[320px] md:h-[520px] md:w-[520px] lg:h-[580px] lg:w-[580px]"
               />
             </motion.div>
           </motion.div>
